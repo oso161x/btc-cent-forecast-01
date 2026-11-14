@@ -60,7 +60,7 @@ def ewma(prices, half_life_minutes, window=1440):
 def forecast(prices):
     """Forecast the close 240 minutes after the checkpoint.
 
-    Average of two shrinkage estimators of the current level.
+    Average of three shrinkage estimators of the current level.
     """
     if not prices:
         raise ValueError("no prices in case")
